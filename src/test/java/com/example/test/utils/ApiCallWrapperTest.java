@@ -77,8 +77,9 @@ class ApiCallWrapperTest {
 	
 	@Test
 	void testHookbNo2() throws Exception {
+		// test ini masih gagal karena url not response, saya coba di postman juga sama gada response sama sekali
 		// testing another API https://hookb.in with class created manualy
-		String url = String.format("%s://%s:%s%s", protocol, host, "", pathSatu);
+		String url = String.format("%s://%s%s%s", protocol, host, "", pathSatu);
 		CandidateRequest rq = new CandidateRequest();
 		rq.setName("nama_kandidat");
 		rq.setAddress("address_kalimat");
@@ -94,8 +95,9 @@ class ApiCallWrapperTest {
 	
 	@Test
 	void testHookbNo3() throws Exception {
+		// test ini masih gagal karena url not response, saya coba di postman juga sama gada response sama sekali
 		// testing another API https://hookb.in with class created manualy
-		String url = String.format("%s://%s:%s%s", protocol, host, "", pathSatu);
+		String url = String.format("%s://%s%s%s", protocol, host, "", pathSatu);
 		CandidateRequest rq = new CandidateRequest();
 		rq.setNid(10);
 		rq.setOfficeId(3);
@@ -105,7 +107,6 @@ class ApiCallWrapperTest {
 		};
 		Object response = api.callExternalApi(url, "POST", type, rq);
 		assertNull(response);
-		
 	}
 
 }
